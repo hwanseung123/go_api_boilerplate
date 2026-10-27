@@ -26,7 +26,7 @@ func Get(db *sql.DB) http.HandlerFunc{
          if err = resp.Scan(&u.Id , &u.Name); err != nil {
             return nil, err
          }
-          // users append (var users []User) =(var users []User,new user) 
+          // users append (var users []Person) = (var users []Person,new user) 
           users = append(users,u)
        }
        // not error => nil
