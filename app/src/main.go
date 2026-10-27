@@ -15,8 +15,8 @@ type User struct {
     Name string `json: "name"`
 }
 
-
 var db *sql.DB
+
 func initDB() {
   var err error
   // sql.Open => This is essential for the code : modernc.org/sqlite 
@@ -37,23 +37,8 @@ func initDB() {
   fmt.Println("success table@@@@")
 }
 
-/*
-func helloHandler(w http.ResponseWriter, r *http.Request){
-   if r.URL.Path != "/" {
-      http.NotFound(w,r)
-      return
-  }
-   fmt.Fprint(w,"Hello World")
-}
-*/
-
-
 func main(){
    initDB()
-   // http.HandleFunc("/",helloHandler)
-   // err := http.ListenAndServe(":8080",nil)
-   // fmt.Println("Server 8080")
-   // router := gin.Default()
    mux := http.NewServeMux()
    // "/" => route
    mux.HandleFunc("/",func(w http.ResponseWriter, r *http.Request){
@@ -62,7 +47,8 @@ func main(){
    // "/insert" => route
    mux.HandleFunc("/insert",handlers.Insert(db))
    log.Println("server 8080: starting")
-
+  // "/delte" => route
+   mux.HandleFunc("/delete",handlers.Delete(db))
    err := http.ListenAndServe(":8080",mux)
    if err != nil {
        log.Fatalf("failed server...",err)
