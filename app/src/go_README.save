@@ -9,6 +9,7 @@ One browser   ->  A Channel
 
 we say mux , it usually means HTTP request mulitiplexer
 
+
 http muilitplexr sloves bottlneneck
 mulitiplexing does not make your javascrpit smaller or your images
 lighter
