@@ -47,8 +47,11 @@ func main(){
    // "/insert" => route
    mux.HandleFunc("/insert",handlers.Insert(db))
    log.Println("server 8080: starting")
-  // "/delte" => route
+   // "/delte" => route
    mux.HandleFunc("/delete",handlers.Delete(db))
+   // "/get" => route
+   mux.HandleFunc("/get",handlers.Get(db))
+
    err := http.ListenAndServe(":8080",mux)
    if err != nil {
        log.Fatalf("failed server...",err)

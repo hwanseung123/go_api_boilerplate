@@ -1,0 +1,36 @@
+why use a mux server?
+
+1. Mulitplex 
+In GO, a mux generally refers to an HTTP request mulitiplexer.
+
+One browser   ->  A Channel
+              ->  B Channel 
+              ->  C Channel
+
+we say mux , it usually means HTTP request mulitiplexer
+
+http muilitplexr sloves bottlneneck
+mulitiplexing does not make your javascrpit smaller or your images
+lighter
+it reduces the wating the happens while the browser asks for each
+asset
+
+
+-----------------------------------------------------------------------------------------------------
+
+how to build and run from the Rescursive dir?
+=> go build ./... 
+
+pwd => /home/backend/app
+             
+   - home 
+     - backend 
+       - app 
+        : go.mod , go.sum
+        - internal     
+         - handlers 
+           : inser.go , delete.go , get.go
+        - src 
+           : main.go , demo.db  
+
+=> successfuly run ./src 

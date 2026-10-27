@@ -30,7 +30,7 @@ func Insert(db *sql.DB) http.HandlerFunc {
     var user UserRequest
     err := json.NewDecoder(r.Body).Decode(&user)
     if err != nil || user.Name == "" {
-      fmt.Println("JSON Parssing error",err)
+      fmt.Println("JSON Parsing error",err)
       http.Error(w,"Invaild request Body" , http.StatusBadRequest)
     }
     // db insert
