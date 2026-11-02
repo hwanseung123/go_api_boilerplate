@@ -21,6 +21,7 @@ func initDB() {
   var err error
   // sql.Open => This is essential for the code : modernc.org/sqlite 
   db,err = sql.Open("sqlite","demo.db")
+
   if err != nil{
        log.Fatalf("Failed to open database: %v",err)
   }
@@ -39,6 +40,7 @@ func initDB() {
 
 func main(){
    initDB()
+   Gmail()
    mux := http.NewServeMux()
    // "/" => route
    mux.HandleFunc("/",func(w http.ResponseWriter, r *http.Request){

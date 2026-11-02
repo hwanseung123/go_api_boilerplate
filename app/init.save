@@ -10,8 +10,6 @@ if it is not there , run it
 git config --global user.name "Your name"
 git config --global user.email "Your.email@exmaple.com"
 
-
-
 2. move ~/ssh
 => ssh-keygen -t ed25519 -C "Your.email@example.com" (github)
 => cat ~/.ssh/id_ed25519.pub
@@ -21,4 +19,18 @@ github project -> Settings -> SSH and GPG keys -> New SSH key
 3. test 
 => ssh -T git@github.com
 
+--------------------------------------------------------------------------------------
+
+/etc/systemd/system/error-api.service
+
+lni, TOML
+# what it is unit?
+# In order of execution 
+[Unit]
+Description=web Service
+After=network.target sqlite.service
+
+[Service]
+Type=simple
+ExecStart
 

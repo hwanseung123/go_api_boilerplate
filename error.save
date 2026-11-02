@@ -1,0 +1,5 @@
+if the value cannot be loaded from the .go file and the makefile
+create new .env file by running 
+
+=> 1. echo "password = dsadasd" > .env 
+   2. change the file owner from root => your project user (hwan)
