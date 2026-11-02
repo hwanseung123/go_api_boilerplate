@@ -1,10 +1,13 @@
-# include .env file get out 
+# if the .env file currently exist  => export .env file => use .go file  
+# if the .env file does not currently exist => return ""
+
 ifneq (,&(wildcard .env))
 	include .env
 	export
 endif
-
+#########################################################################3
 .PHONY: build run
+
 APP_NAME := server
 BUILD_DIR := app/src/
 MAIN_FILE := app/src/main.go
