@@ -51,6 +51,8 @@ func main(){
    mux.HandleFunc("/delete",handlers.Delete(db))
    // "/get" => route
    mux.HandleFunc("/get",handlers.Get(db))
+   // "/put" => route
+   mux.HandleFunc("/put",handlers.Put(db))
 
    err := http.ListenAndServe(":8080",mux)
    if err != nil {

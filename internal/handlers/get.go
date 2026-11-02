@@ -8,21 +8,21 @@ import (
 )
 
 
-type PersonGetResponse struct {
+type UserGetRequest struct {
    Id int `json:"id"`
    Name string `json:"name"`
 }
 
 
 func Get(db *sql.DB) http.HandlerFunc{
-    getUser := func() ([]PersonGetResponse,error) {
+    getUser := func() ([]UserGetRequest,error) {
        query :=  `SELECT id,name FROM users`
        resp, err := db.Query(query) // get => db.Query
        defer resp.Close() // end db memeory close
 
-       var users []PersonGetResponse
+       var users []UserGetRequest
        for resp.Next() {
-         var u PersonGetResponse
+         var u UserGetRequest
          if err = resp.Scan(&u.Id , &u.Name); err != nil {
             return nil, err
          }
