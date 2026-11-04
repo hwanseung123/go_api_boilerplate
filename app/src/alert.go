@@ -21,7 +21,7 @@ func Gmail() {
    }
    message.SetHeader("From",myEmail)
    message.SetHeader("To",myEmail)
-   message.SetBody("text/html","<h1>gokg.in buger</h1>")
+   message.SetBody("text/html","<h1>gokg.in buger buger</h1>")
 
    dialer := gomail.NewDialer("smtp.gmail.com",587,myEmail,password)
    if err := dialer.DialAndSend(message); err != nil {
