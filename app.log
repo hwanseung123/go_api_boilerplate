@@ -1,10 +1,9 @@
 success table@@@@
-2026/11/04 14:58:15 HTML,Email sent successfuly
-2026/11/04 14:58:15 server 8080: starting
-&{0x51fabeba750 0x51fabfb5680 {} 0x4f9560 false false false {{} {0 0}} {{} 0} 0x51fabeb8000 {0x51fac2ac000 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
-&{0x51fabeba750 0x51fabfb57c0 {} 0x4f9560 false false false {{} {0 0}} {{} 0} 0x51fabe39580 {0x51fac0ba4b0 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
+2026/11/04 15:34:02 HTML,Email sent successfuly
+2026/11/04 15:34:02 server 8080: starting
+&{0xa9a9b93a750 0xa9a9ba79680 {} 0x4f9560 false false false {{} {0 0}} {{} 0} 0xa9a9b938000 {0xa9a9bd2e000 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
+&{0xa9a9b93a750 0xa9a9ba797c0 {} 0x4f9560 false false false {{} {0 0}} {{} 0} 0xa9a9b8c3580 {0xa9a9bb664b0 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
 Index: 0 , Id: 5 , Name: not apple
 Index: 1 , Id: 6 , Name: n apple
 Index: 2 , Id: 7 , Name: apple
 Index: 3 , Id: 8 , Name: apple
-&{0x51fabeba000 0x51fabf48140 {} 0x4f9560 false false false {{} {0 0}} {{} 0} 0x51fabe39100 {0x51fabeac000 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
