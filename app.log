@@ -1,8 +1,53 @@
 success table@@@@
-2026/11/04 15:34:02 HTML,Email sent successfuly
-2026/11/04 15:34:02 server 8080: starting
-&{0xa9a9b93a750 0xa9a9ba79680 {} 0x4f9560 false false false {{} {0 0}} {{} 0} 0xa9a9b938000 {0xa9a9bd2e000 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
-&{0xa9a9b93a750 0xa9a9ba797c0 {} 0x4f9560 false false false {{} {0 0}} {{} 0} 0xa9a9b8c3580 {0xa9a9bb664b0 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
+2026/11/04 17:53:47 HTML,Email sent successfuly
+2026/11/04 17:53:47 server 8080: starting
+&{0x8f753712750 0x8f7537d3680 {} 0x4f9560 false false false {{} {0 0}} {{} 0} 0x8f75357a000 {0x8f75399e000 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
+Index: 0 , Id: 5 , Name: not apple
+Index: 1 , Id: 6 , Name: n apple
+Index: 2 , Id: 7 , Name: apple
+Index: 3 , Id: 8 , Name: apple
+Index: 0 , Id: 5 , Name: not apple
+Index: 1 , Id: 6 , Name: n apple
+Index: 2 , Id: 7 , Name: apple
+Index: 3 , Id: 8 , Name: apple
+&{0x8f7537121b0 0x8f7536383c0 0x8f7535bb280 0x4f9560 false false false {{} {0 0}} {{} 0} 0x8f7535bb380 {0x8f7534f6000 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
+&{0x8f7535d6120 0x8f753904140 0x8f75357a100 0x4f9560 false false false {{} {0 0}} {{} 0} 0x8f75357a140 {0x8f753918000 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
+&{0x8f753712360 0x8f753638780 0x8f7535bb4c0 0x4f9560 false false false {{} {0 0}} {{} 0} 0x8f7535bb380 {0x8f7534f61e0 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
+&{0x8f753712510 0x8f753638a00 0x8f7535bb600 0x4f9560 false false false {{} {0 0}} {{} 0} 0x8f7535bb380 {0x8f7534f63c0 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
+&{0x8f753712750 0x8f753638c80 0x8f7535bb740 0x4f9560 false false false {{} {0 0}} {{} 0} 0x8f7535bb380 {0x8f7534f65a0 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
+&{0x8f7535d6480 0x8f7539043c0 0x8f75357a400 0x4f9560 false false false {{} {0 0}} {{} 0} 0x8f75357a140 {0x8f7539181e0 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
+Index: 0 , Id: 5 , Name: not apple
+Index: 1 , Id: 6 , Name: n apple
+Index: 2 , Id: 7 , Name: apple
+Index: 3 , Id: 8 , Name: apple
+Index: 4 , Id: 9 , Name: exmaple
+Index: 0 , Id: 5 , Name: not apple
+Index: 1 , Id: 6 , Name: n apple
+Index: 2 , Id: 7 , Name: apple
+Index: 3 , Id: 8 , Name: apple
+Index: 4 , Id: 9 , Name: exmaple
+Index: 0 , Id: 5 , Name: not apple
+Index: 1 , Id: 6 , Name: n apple
+Index: 2 , Id: 7 , Name: apple
+Index: 3 , Id: 8 , Name: apple
+Index: 4 , Id: 9 , Name: exmaple
+Index: 5 , Id: 10 , Name: exmaple
+2026/11/04 18:04:19 name: example
+Index: 0 , Id: 5 , Name: not apple
+Index: 1 , Id: 6 , Name: n apple
+Index: 2 , Id: 7 , Name: apple
+Index: 3 , Id: 8 , Name: apple
+Index: 4 , Id: 9 , Name: exmaple
+Index: 5 , Id: 10 , Name: exmaple
+&{0x8f753712000 0x8f753638000 {} 0x4f9560 false false false {{} {0 0}} {{} 0} 0x8f7536780c0 {0x8f753944000 map[] false false} map[] false 0 -1 0 false false false [] {{} 0} [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [0 0 0 0 0 0 0 0 0 0] [0 0 0] {{} {0 0}} <nil> false} Hello world
+2026/11/04 18:05:38 name: example
+Index: 0 , Id: 5 , Name: not apple
+Index: 1 , Id: 6 , Name: n apple
+Index: 2 , Id: 7 , Name: apple
+Index: 3 , Id: 8 , Name: apple
+Index: 4 , Id: 9 , Name: exmaple
+Index: 5 , Id: 10 , Name: exmaple
+2026/11/04 18:06:08 name: exmaple
 Index: 0 , Id: 5 , Name: not apple
 Index: 1 , Id: 6 , Name: n apple
 Index: 2 , Id: 7 , Name: apple

@@ -5,9 +5,14 @@ create new .env file by running
    2. change the file owner from root => your project user (hwan)
 
 
-
 Shut down the 8080 project
 
 => 1. lsof -ti :8080
    2. kill -9 78234
 
+
+app.log server
+
+=> 1. add => && stdbuf -oL ./$(APP_NAME) => change Line-buffered
+   2. make reload
+   3. tail -f /home/backend/app.log 

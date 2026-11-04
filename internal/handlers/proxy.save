@@ -1,4 +1,7 @@
-curl -X POST "http://localhost:8080/insert -H "Content-Type: application/json" -d '{"name": "apple"}';
+curl -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"name": "exmaple"}' \
+  http://localhost:8080/insert
 
 curl -X DELETE "http://localhost:8080/delete?name="***";
 
