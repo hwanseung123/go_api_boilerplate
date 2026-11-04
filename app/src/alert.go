@@ -10,8 +10,7 @@ import (
 func Gmail() {
    // Crate a message
    message := gomail.NewMessage()
-
-  
+ 
    myEmail := "hwnia285@gmail.com"
    password := os.Getenv("PASSWORD")
    // Set email headers

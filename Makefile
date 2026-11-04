@@ -5,6 +5,9 @@ ifneq (,&(wildcard .env))
 	include .env
 	export
 endif
+
+
+
 #########################################################################3
 .PHONY: build run
 
@@ -12,6 +15,7 @@ APP_NAME := server
 BUILD_DIR := app/src/
 MAIN_FILE := app/src/main.go
 ALERT_FILE := app/src/alert.go
+PID_FILE := server.pid
 
 build:
 	@echo "Building $(APP_NAME)..."
@@ -23,3 +27,14 @@ run:
 
 debug:
 	@echo "PASSWORD : $(PASSWORD)"
+
+reload:
+	@echo "Automatic...build&run"
+	if [ -f $(PID_FILE) ]; then \
+		kill -9 $$(cat $(PID_FILE)) 2>	/dev/null || true; \
+		rm -f $(PID_FILE); \
+	fi
+
+	(nohup sh -c "cd $(BUILD_DIR) && ./$(APP_NAME)" > app.log 2>&1 </dev/null & echo $$! > $(PID_FILE))
+	pwd
+
