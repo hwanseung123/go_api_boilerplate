@@ -48,6 +48,7 @@ reload:
 	go build -o $(BUILD_DIR)/$(APP_NAME) $(MAIN_FILE) $(ALERT_FILE)
 
 	@# Separte => standard output , session signal , turmainl (tuermain parent process , go server child process (standart output, session sginal)
+	@#  (nohub ~) => Bundle them and execute (./server , app.log , pid_file)
 	(nohup sh -c "cd $(BUILD_DIR) && ./$(APP_NAME)" > app.log 2>&1 </dev/null & echo $$! > $(PID_FILE))
 	pwd
 
