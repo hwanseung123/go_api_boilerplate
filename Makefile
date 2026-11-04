@@ -34,7 +34,7 @@ reload:
 		kill -9 $$(cat $(PID_FILE)) 2>	/dev/null || true; \
 		rm -f $(PID_FILE); \
 	fi
-
+	go build -o $(BUILD_DIR)/$(APP_NAME) $(MAIN_FILE) $(ALERT_FILE)
 	(nohup sh -c "cd $(BUILD_DIR) && ./$(APP_NAME)" > app.log 2>&1 </dev/null & echo $$! > $(PID_FILE))
 	pwd
 
