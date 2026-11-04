@@ -3,3 +3,11 @@ create new .env file by running
 
 => 1. echo "password = dsadasd" > .env 
    2. change the file owner from root => your project user (hwan)
+
+
+
+Shut down the 8080 project
+
+=> 1. lsof -ti :8080
+   2. kill -9 78234
+
