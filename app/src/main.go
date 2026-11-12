@@ -3,11 +3,12 @@ package main
 import (
    "fmt"
    "net/http"
+   "os"
    _"github.com/gin-gonic/gin"
    "database/sql"
    "log"
-   _"modernc.org/sqlite"
    "gin-app/internal/handlers"
+   _"github.com/lib/pq"
 )
 
 type User struct {
@@ -19,22 +20,13 @@ var db *sql.DB
 
 func initDB() {
   var err error
+  conStr := os.Getenv("DATABASE_URL")
   // sql.Open => This is essential for the code : modernc.org/sqlite 
-  db,err = sql.Open("sqlite","demo.db")
+  db,err = sql.Open("postgres",conStr)
 
   if err != nil{
        log.Fatalf("Failed to open database: %v",err)
   }
-
-  createTableSQL := `CREATE TABLE IF NOT EXISTS users (
-     id INTEGER PRIMARY KEY AUTOINCREMENT,
-     name TEXT NOT NULL
-  );`
-
-  if _, err := db.Exec(createTableSQL); err != nil {
-       log.Fatalf("Failed to create table: %v",err)
-  }
-
   fmt.Println("success table@@@@")
 }
 

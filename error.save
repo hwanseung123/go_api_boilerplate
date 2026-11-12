@@ -16,3 +16,14 @@ app.log server
 => 1. add => && stdbuf -oL ./$(APP_NAME) => change Line-buffered
    2. make reload
    3. tail -f /home/backend/app.log 
+
+
+------------------------------------------------------------------------------
+
+psql 
+
+1. CREATE USER test WITH PASSWORD '1234'; => user
+2. CREATE DATABASE mydb OWNER test; => mydb
+3. GRANT ALL PRIVILEGES ON DATABASE mydb TO test; => read , write , update 
+
+=> psql -U test -d mydb -h localhost

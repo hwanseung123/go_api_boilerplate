@@ -1,0 +1,19 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: app/Dockerfile
+    
+    container_name: white-docker-go
+    platform: linux/amd64
+    
+    environment:
+      DATABASE_TYPE: sqlite
+      DATABASE_URL: sqlite:///data/db.sqlit3
+      DB_NAME: "mydb"
+    
+    volumes:
+      - sqlite_data:/data
+
+volumes:
+  sqlite_data:
