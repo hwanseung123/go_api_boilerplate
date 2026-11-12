@@ -18,6 +18,9 @@ func Get(db *sql.DB) http.HandlerFunc{
     getUser := func() ([]UserGetRequest,error) {
        query :=  `SELECT id,name FROM users`
        resp, err := db.Query(query) // get => db.Query
+       if err != nil{
+         panic(err)
+       }
        defer resp.Close() // end db memeory close
 
        var users []UserGetRequest

@@ -23,6 +23,9 @@ func initDB() {
   conStr := os.Getenv("DATABASE_URL")
   // sql.Open => This is essential for the code : modernc.org/sqlite 
   db,err = sql.Open("postgres",conStr)
+  if err != nil {
+    panic(err)
+  }
 
   if err != nil{
        log.Fatalf("Failed to open database: %v",err)
