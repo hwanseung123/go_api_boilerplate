@@ -33,6 +33,7 @@ func Put(db *sql.DB) http.HandlerFunc{
     err := json.NewDecoder(r.Body).Decode(&user)
     err = putUser(user.Id,user.Name)
     log.Println(user.Id)
+
     if err != nil {
        fmt.Println("decoding error",err)
     }
