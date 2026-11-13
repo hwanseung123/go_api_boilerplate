@@ -1,19 +1,6 @@
 success table@@@@
-2026/11/13 10:47:47 HTML,Email sent successfuly
-2026/11/13 10:47:47 server 8080: starting
-<nil>
-Index: 0 , Id: 5 , Name: not apple
-Index: 1 , Id: 6 , Name: n apple
-Index: 2 , Id: 7 , Name: apple
-Index: 3 , Id: 8 , Name: apple
-Index: 4 , Id: 11 , Name: exmaple
-Index: 5 , Id: 12 , Name: exmaple
-Index: 6 , Id: 13 , Name: exmaple
-Index: 7 , Id: 14 , Name: exmaple
-Index: 8 , Id: 15 , Name: exmaple
-Index: 9 , Id: 16 , Name: exmaple
-Index: 10 , Id: 17 , Name: exmaple
-<nil>
+2026/11/13 10:59:37 HTML,Email sent successfuly
+2026/11/13 10:59:37 server 8080: starting
 Index: 0 , Id: 5 , Name: not apple
 Index: 1 , Id: 6 , Name: n apple
 Index: 2 , Id: 7 , Name: apple
@@ -26,3 +13,14 @@ Index: 8 , Id: 15 , Name: exmaple
 Index: 9 , Id: 16 , Name: exmaple
 Index: 10 , Id: 17 , Name: exmaple
 Index: 11 , Id: 18 , Name: exmaple
+2026/11/13 11:00:11 name: apple
+Index: 0 , Id: 5 , Name: not apple
+Index: 1 , Id: 6 , Name: n apple
+Index: 2 , Id: 11 , Name: exmaple
+Index: 3 , Id: 12 , Name: exmaple
+Index: 4 , Id: 13 , Name: exmaple
+Index: 5 , Id: 14 , Name: exmaple
+Index: 6 , Id: 15 , Name: exmaple
+Index: 7 , Id: 16 , Name: exmaple
+Index: 8 , Id: 17 , Name: exmaple
+Index: 9 , Id: 18 , Name: exmaple

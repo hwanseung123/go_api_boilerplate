@@ -22,7 +22,8 @@ func Delete(db *sql.DB) http.HandlerFunc {
        }
 
       log.Println("name:",name)
-      _, err := db.Exec("DELETE FROM users WHERE name = ?",name)
+      query := `DELETE FROM users WHERE name = $1`
+      _, err := db.Exec(query,name)
 
       if err != nil {
          http.Error(w, "Database Error", http.StatusInternalServerError)
