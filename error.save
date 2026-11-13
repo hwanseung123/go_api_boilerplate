@@ -30,7 +30,9 @@ psql
 
 migration.load file
 
-=> this code is a configuartion that migrates data from SQLite demo.db to PostgreSQL mydb automaically creates tables and indexes, applies memory optimizations, 
+=> this code is a configuartion that migrates data 
+from SQLite demo.db to PostgreSQL mydb automaically creates tables and indexes, 
+applies memory optimizations, 
 and converts boolean and text data types to fit 
 the PostgresSQL environment.
 
