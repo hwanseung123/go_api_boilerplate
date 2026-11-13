@@ -16,6 +16,7 @@ type UserRequest struct {
 func Insert(db *sql.DB) http.HandlerFunc {
      // DB Clouser pattern
     insertUser := func(name string) error{
+      fmt.Println(name)
       query := `INSERT INTO users (name) VALUES ($1)`
       _, err := db.Exec(query,name)
       return err
@@ -32,10 +33,10 @@ func Insert(db *sql.DB) http.HandlerFunc {
     if err != nil || user.Name == "" {
       fmt.Println("JSON Parsing error",err)
       http.Error(w,"Invaild request Body" , http.StatusBadRequest)
+      return
     }
     // db insert
     err = insertUser(user.Name)
-    fmt.Println(err)
     if err != nil {
        http.Error(w,"Failed to insert user" , http.StatusInternalServerError)
        return

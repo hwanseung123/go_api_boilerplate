@@ -17,7 +17,7 @@ type UserPutRequest struct {
 
 func Put(db *sql.DB) http.HandlerFunc{
   putUser := func(id int ,name string) error{
-      query := `UPDATE users SET name = ? WHERE id = ?`
+      query := `UPDATE users SET name = $1 WHERE id = $2`
       _, err := db.Exec(query,name,id)
       return err
   }
