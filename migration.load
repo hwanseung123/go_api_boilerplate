@@ -8,3 +8,4 @@ SET work_mem to '256MB', maintenance_work_mem to '256MB'
 
 CAST type int when (= precision 1) to boolean using tinyint-to-boolean,
      type text to varchar drop default;
+
