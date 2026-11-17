@@ -20,7 +20,7 @@ var db *sql.DB
 
 func initDB() {
   var err error
-  conStr := os.Getenv("DATABASE_URL")
+  conStr := os.Getenv("DATABASE_URL_D")
   // sql.Open => This is essential for the code : modernc.org/sqlite 
   db,err = sql.Open("postgres",conStr)
   if err != nil {

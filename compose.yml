@@ -3,15 +3,14 @@ services:
     image: postgres:latest
     container_name: postrgre_db
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 1234    
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}  
     ports:
       - "5433:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql 
+      - postgres_data:/var/lib/postgresql 
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: ["CMD-SHELL", "pg_isready -U test_db"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -28,11 +27,11 @@ services:
       - 8.8.4.4
     container_name: white_docker_go
     environment:
-      - DB_HOST=postgres
+      - DB_HOST=db
       - DB_PORT=5432
-      - DB_USER=test
-      - DB_PASSWORD=1234
-      - DB_NAME=mydb
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
     restart: always
     ports:
       - "8080:8080"
