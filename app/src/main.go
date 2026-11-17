@@ -35,7 +35,6 @@ func initDB() {
 
 func main(){
    initDB()
-   Gmail()
    mux := http.NewServeMux()
    // "/" => route
    mux.HandleFunc("/",func(w http.ResponseWriter, r *http.Request){

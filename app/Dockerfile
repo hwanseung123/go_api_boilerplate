@@ -1,34 +1,23 @@
-FROM ubuntu:latest
 FROM golang:1.26-alpine AS builder
+WORKDIR /build
 
-# --- 1. build image => cook --- #
-# SQLite CGO complier and GCC build (package)
-RUN apk add --no-cache build-base
+RUN apk add --no-cache git
 
-WORKDIR /workspace
-
-# copy dependency docker server
-# /app/go.mod , /app/go.sum 
 COPY go.mod go.sum ./
+ENV GOPROXY=direct
 RUN go mod download
 
-# copy local file -> docker file 
-COPY internal/handlers/ .
-COPY app/ .
+COPY . . 
+RUN CGO_ENABLED=0 GOOS=linux go build -o /build/main ./app/src
 
-# CGO build
-ENV CGO_ENABLED=0
-RUN go build -o server .
+FROM alpine:latest
 
-# --- start image => eat --- #
-FROM alpine:3.19
-RUN apk add --no-cache sqlite-libs ca-certificates
-# copy CGO build -> new dir /app
-WORKDIR /app
+RUN apk --no-cache add ca-certificates
 
-# binary file build
-COPY --from=builder /workspace/server ./server
+WORKDIR /root/
 
-RUN chmod +x server
+# copy binaru file 
+COPY --from=builder /build/main .
 
-CMD ["./server"]
+EXPOSE 8080
+CMD ["./main"]

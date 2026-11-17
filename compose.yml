@@ -1,19 +1,50 @@
 services:
+  db:
+    image: postgres:latest
+    container_name: postrgre_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234    
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql 
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+     - app-network
+
   app:
     build:
       context: .
       dockerfile: app/Dockerfile
-    
-    container_name: white-docker-go
-    platform: linux/amd64
-    
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    container_name: white_docker_go
     environment:
-      DATABASE_TYPE: sqlite
-      DATABASE_URL: sqlite:///data/db.sqlit3
-      DB_NAME: "mydb"
-    
-    volumes:
-      - sqlite_data:/data
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USER=test
+      - DB_PASSWORD=1234
+      - DB_NAME=mydb
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app-network
 
 volumes:
-  sqlite_data:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge
