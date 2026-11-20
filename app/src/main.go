@@ -9,6 +9,9 @@ import (
    "log"
    "gin-app/internal/handlers"
    _"github.com/lib/pq"
+   _"github.com/golang-migrate/migrate/v4"
+   _"github.com/golang-migrate/migrate/v4/database/postgres"
+   _"github.com/golang-migrate/migrate/v4/source/file"
 )
 
 type User struct {
@@ -19,18 +22,21 @@ type User struct {
 var db *sql.DB
 
 func initDB() {
+  conStr := os.Getenv("DATABASE_URL")
+  if conStr == "" {
+    log.Fatalf("DATABASE is empty")
+  }
   var err error
-  conStr := os.Getenv("DATABASE_URL_D")
-  // sql.Open => This is essential for the code : modernc.org/sqlite 
-  db,err = sql.Open("postgres",conStr)
-  if err != nil {
-    panic(err)
-  }
+  // sql.Open => This is essential for the code : modernc.org/sqlite
+  db, err = sql.Open("postgres",conStr)
 
-  if err != nil{
-       log.Fatalf("Failed to open database: %v",err)
+  if err != nil {
+    log.Fatalf("DB Open error: %v",err)
   }
-  fmt.Println("success table@@@@")
+  if err != nil || db.Ping() != nil {
+    log.Println("----------------- nil error ----------------")
+    panic(err.Error())
+  }
 }
 
 func main(){

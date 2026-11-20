@@ -1,0 +1,11 @@
+.git
+.gitignore
+
+# Go binaris and build
+bin/
+dist/
+tmp/
+*.exe
+*.dylib
+*.pem
+*.key

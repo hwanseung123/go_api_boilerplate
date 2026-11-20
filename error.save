@@ -36,4 +36,7 @@ applies memory optimizations,
 and converts boolean and text data types to fit 
 the PostgresSQL environment.
 
+view table 
+1. docker exec -it postrgre_db psql -U <DB_USER>test_db -d <DB_NAME>test -c "\dt"
+=> select table
 

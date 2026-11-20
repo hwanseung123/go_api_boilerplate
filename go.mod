@@ -4,6 +4,7 @@ go 1.26.0
 
 require (
 	github.com/gin-gonic/gin v1.12.0
+	github.com/golang-migrate/migrate/v4 v4.20.1
 	github.com/lib/pq v1.12.3
 	gopkg.in/mail.v2 v2.3.1
 	gorm.io/gorm v1.31.2

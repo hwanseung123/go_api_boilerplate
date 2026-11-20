@@ -1,5 +1,5 @@
-CREATE USER @@@1 WITH PASSWORD '@@@@';
-CREATE DATABASE @@@1 OWNER test;
-GRANT ALL PRIVILEGES ON DATABASE @@@1 TO test;
-
-=> docker compose.yml (db)
+-- change test_db dabase --
+\c test
+ 
+-- public schema create --
+GRANT USAGE, CREATE ON SCHEMA public TO test_db;
