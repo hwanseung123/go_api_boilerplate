@@ -1,6 +1,5 @@
 .git
-.gitignore
-
+*.logs
 # Go binaris and build
 bin/
 dist/

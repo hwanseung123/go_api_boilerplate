@@ -5,9 +5,13 @@ RUN apk add --no-cache git
 
 COPY go.mod go.sum ./
 ENV GOPROXY=direct
-RUN go mod download
+
+# main first module downalod 
+RUN --mount=type=cache,target=/go/pkg/mod \
+ go mod download 
 
 COPY . . 
+
 RUN CGO_ENABLED=0 GOOS=linux go build -o /build/main ./app/src
 
 FROM alpine:latest
