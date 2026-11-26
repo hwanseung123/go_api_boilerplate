@@ -1,4 +1,15 @@
 services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - app
+    networks:
+      - app-network
   db:
     image: postgres:latest
     container_name: postrgre_db
@@ -18,20 +29,18 @@ services:
       start_period: 10s
     networks:
      - app-network
-
   app:
     build:
       context: .
       dockerfile: app/Dockerfile
-    dns:
-      - 8.8.8.8
-      - 8.8.4.4
+    
     container_name: white_docker_go
+    expose:
+      - "8080"
     environment:
       DATABASE_URL: ${DATABASE_URL}
     restart: always
-    ports:
-      - "8080:8080"
+
     depends_on:
       db:
         condition: service_healthy

@@ -30,9 +30,6 @@ func initDB() {
   // sql.Open => This is essential for the code : modernc.org/sqlite
   db, err = sql.Open("postgres",conStr)
 
-  if err != nil {
-    log.Fatalf("DB Open error: %v",err)
-  }
   if err != nil || db.Ping() != nil {
     log.Println("----------------- nil error ----------------")
     panic(err.Error())
