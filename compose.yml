@@ -5,7 +5,8 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/nginx-blocklist/ips.txt:/etc/nginx/ips.txt
     depends_on:
       - app
     networks:
@@ -33,7 +34,6 @@ services:
     build:
       context: .
       dockerfile: app/Dockerfile
-    
     container_name: white_docker_go
     expose:
       - "8080"

@@ -10,6 +10,7 @@ ENV GOPROXY=direct
 RUN --mount=type=cache,target=/go/pkg/mod \
  go mod download 
 
+COPY nginx/conf.d/*.conf /etc/nginx/conf.d/default.conf
 COPY . . 
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o /build/main ./app/src
