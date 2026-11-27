@@ -24,13 +24,18 @@ case "$cmd" in
      is_valid_target "$ip" || { echo "blocklist IP/CIDR: $ip"; exit 1; }
      echo "$ip" >> "$STATE_FILE"
      ;;
+  list)
+     # ip =""
+     ip="${2:-}"
+     cd nginx-blocklist && cat ips.txt
+     ;;
   del)
      ip="${2:-}"
      is_valid_target "$ip" || { echo "blocklist IP/CIDR: $ip"; exit 1; }
      echo "$ip"
      cd nginx-blocklist
-     if [[ -z "$ip" ]]; then
-        echo "$ip: $0 <delete_ip>" >&2
+     if [[ -n "$ip" ]]; then
+        echo "$ip not found" >&2
         exit 1
      fi
      awk -v target="$ip" '
