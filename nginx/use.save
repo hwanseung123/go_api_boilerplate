@@ -1,2 +1,11 @@
 ./sh add ipv4
 ./sh del ipv4
+
+--------------------------------------------------
+1. docker exec -it <nginx container id> sh 
+2. nginx -t && nginx -s reload
+
+test
+curl -i -s http://127.0.0.1/ | head -n 10
+
+
